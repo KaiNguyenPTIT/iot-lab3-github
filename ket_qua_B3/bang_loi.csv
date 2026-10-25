@@ -1,0 +1,5 @@
+,MAE,RMSE
+Ridge_6,1.527,1.784
+Persistence,1.623,2.073
+Ridge_21,1.681,2.009
+Mean_train,2.979,3.407

@@ -1,0 +1,249 @@
+{
+  "bai": "Bài thực hành 3 — Trích chọn đặc trưng và học từ dữ liệu IoT (INT14149)",
+  "sinh_vien": {
+    "ho_ten": "Nguyễn Đình Khải",
+    "mssv": "B23DCCN420",
+    "lop": "IOT và ứng dụng_Nhóm 4_Tổ 1",
+    "ngay": "2026-10-25"
+  },
+  "nguon_du_lieu": {
+    "tep": "du_lieu_B2.csv",
+    "data_source": "python_sample",
+    "ghi_chu": "Bộ mẫu mô phỏng 720 dòng/60 phút trên lưới 5 giây (data_source = python_sample); không phải dữ liệu ThingsBoard"
+  },
+  "kiem_tra": {
+    "rows_raw": 723,
+    "rows_clean": 720,
+    "duplicates": 3,
+    "missing": {
+      "temperature": 0,
+      "humidity": 1,
+      "distance_cm": 1
+    },
+    "segments": 1,
+    "grid_samples": 720,
+    "start": "2026-10-25 08:00:00+07:00",
+    "end": "2026-10-25 09:00:00+07:00",
+    "period_seconds": 5
+  },
+  "cua_so": {
+    "window_seconds": 60,
+    "samples_per_window": 12,
+    "stride_seconds": 30,
+    "cut": "2026-10-25 08:42:00+07:00",
+    "n_train_samples": 504,
+    "n_test_samples": 216,
+    "n_train_pairs": 81,
+    "n_test_pairs": 33
+  },
+  "dac_trung": {
+    "so_cot": 21,
+    "ten": [
+      "temperature_mean",
+      "temperature_std",
+      "temperature_min",
+      "temperature_max",
+      "temperature_range",
+      "temperature_delta",
+      "temperature_slope",
+      "humidity_mean",
+      "humidity_std",
+      "humidity_min",
+      "humidity_max",
+      "humidity_range",
+      "humidity_delta",
+      "humidity_slope",
+      "distance_cm_mean",
+      "distance_cm_std",
+      "distance_cm_min",
+      "distance_cm_max",
+      "distance_cm_range",
+      "distance_cm_delta",
+      "distance_cm_slope"
+    ],
+    "duoc_chon": [
+      "temperature_mean",
+      "temperature_max",
+      "temperature_delta",
+      "temperature_slope",
+      "humidity_delta",
+      "humidity_slope"
+    ],
+    "xep_hang_F": [
+      {
+        "rank": 1,
+        "feature": "temperature_delta",
+        "F": 51.1971,
+        "p_value": 0.0
+      },
+      {
+        "rank": 2,
+        "feature": "temperature_slope",
+        "F": 45.6091,
+        "p_value": 0.0
+      },
+      {
+        "rank": 3,
+        "feature": "humidity_delta",
+        "F": 41.3354,
+        "p_value": 0.0
+      },
+      {
+        "rank": 4,
+        "feature": "humidity_slope",
+        "F": 40.9292,
+        "p_value": 0.0
+      },
+      {
+        "rank": 5,
+        "feature": "temperature_max",
+        "F": 38.569,
+        "p_value": 0.0
+      },
+      {
+        "rank": 6,
+        "feature": "temperature_mean",
+        "F": 34.2772,
+        "p_value": 0.0
+      },
+      {
+        "rank": 7,
+        "feature": "temperature_min",
+        "F": 19.1043,
+        "p_value": 0.0
+      },
+      {
+        "rank": 8,
+        "feature": "humidity_min",
+        "F": 16.8462,
+        "p_value": 0.0001
+      },
+      {
+        "rank": 9,
+        "feature": "humidity_mean",
+        "F": 13.0743,
+        "p_value": 0.0005
+      },
+      {
+        "rank": 10,
+        "feature": "humidity_range",
+        "F": 10.9995,
+        "p_value": 0.0014
+      },
+      {
+        "rank": 11,
+        "feature": "humidity_std",
+        "F": 10.2022,
+        "p_value": 0.002
+      },
+      {
+        "rank": 12,
+        "feature": "humidity_max",
+        "F": 7.8249,
+        "p_value": 0.0065
+      },
+      {
+        "rank": 13,
+        "feature": "distance_cm_min",
+        "F": 7.1412,
+        "p_value": 0.0091
+      },
+      {
+        "rank": 14,
+        "feature": "temperature_range",
+        "F": 7.0695,
+        "p_value": 0.0095
+      },
+      {
+        "rank": 15,
+        "feature": "distance_cm_mean",
+        "F": 6.6542,
+        "p_value": 0.0117
+      },
+      {
+        "rank": 16,
+        "feature": "temperature_std",
+        "F": 6.4511,
+        "p_value": 0.013
+      },
+      {
+        "rank": 17,
+        "feature": "distance_cm_max",
+        "F": 4.9845,
+        "p_value": 0.0284
+      },
+      {
+        "rank": 18,
+        "feature": "distance_cm_slope",
+        "F": 0.8704,
+        "p_value": 0.3537
+      },
+      {
+        "rank": 19,
+        "feature": "distance_cm_delta",
+        "F": 0.8587,
+        "p_value": 0.3569
+      },
+      {
+        "rank": 20,
+        "feature": "distance_cm_range",
+        "F": 0.0574,
+        "p_value": 0.8113
+      },
+      {
+        "rank": 21,
+        "feature": "distance_cm_std",
+        "F": 0.0308,
+        "p_value": 0.8612
+      }
+    ]
+  },
+  "mo_hinh": {
+    "alpha": 1.0,
+    "k": 6,
+    "metrics": {
+      "Mean_train": {
+        "MAE": 2.979,
+        "RMSE": 3.407
+      },
+      "Persistence": {
+        "MAE": 1.623,
+        "RMSE": 2.073
+      },
+      "Ridge_21": {
+        "MAE": 1.681,
+        "RMSE": 2.009
+      },
+      "Ridge_6": {
+        "MAE": 1.527,
+        "RMSE": 1.784
+      }
+    },
+    "tot_nhat_theo_MAE": "Ridge_6"
+  },
+  "du_bao": {
+    "model": "Ridge_6",
+    "input_start": "2026-10-25 08:58:00+07:00",
+    "input_end": "2026-10-25 08:59:00+07:00",
+    "target_start": "2026-10-25 08:59:00+07:00",
+    "target_end": "2026-10-25 09:00:00+07:00",
+    "temperature_forecast_next60s": 31.903,
+    "actual_next60s": 32.437
+  },
+  "moi_truong": {
+    "python": "3.11.0",
+    "pandas": "3.1.0",
+    "numpy": "2.4.6"
+  },
+  "tep_ket_qua": [
+    "dac_trung_train.csv",
+    "dac_trung_test.csv",
+    "du_bao_test.csv",
+    "bang_loi.csv",
+    "xep_hang_dac_trung.csv",
+    "tom_tat.json",
+    "hinh1_ba_chuoi.png",
+    "hinh2_cua_so.png",
+    "hinh3_du_bao.png"
+  ]
+}
